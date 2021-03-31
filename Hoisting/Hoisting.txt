@@ -1,0 +1,17 @@
+ Excecution Context
+*property : variable object  2. scope chain   3. this variable 
+
+Ececution content object
+creation phase
+1.variable object are created  2. scope chains are created  3. this variable
+
+execution phase
+current excecution context run line by line 
+
+*VARIABLE OBJECT
+1.For each function (Function Declaration) a property is created in the variable object ehich is pointing to that function.
+2. For each variable( variable Declaration) a property is created in the variable object. Which is then set to undefiend.
+3. Argument object are vreated that were passed into the function.
+
+Hoisting is a javascript mechanism where variable and function declaration are moved to the top of their scope before the code excecution.
+
