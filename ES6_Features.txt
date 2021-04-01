@@ -1,0 +1,141 @@
+1. Let Keyword: the let keyword allows you to declare a variable with block scope
+         var x = 10;
+        // Here x is 10
+        {
+        let x = 2;
+        // Here x is 2
+        }
+        // Here x is 10
+
+2. JavaScript const
+The const keyword allows you to declare a constant (a JavaScript variable with a constant value).
+Constants are similar to let variables, except that the value cannot be changed.
+
+            Example
+            var x = 10;
+            // Here x is 10
+            {
+            const x = 2;
+            // Here x is 2
+            }
+            // Here x is 10
+
+example of let and const:
+            function biodata()
+        {
+            let myFirstName = "Ashwini";
+            console.log(myFirstName);
+
+            if(true)
+            {
+                let myLastName = "khonde";
+                console.log('inner :'+myLastName);
+                console.log('inner :'+myFirstName);
+            }
+
+            console.log('inner :'+myLastName);
+        }
+
+        biodata();
+
+3.Fat ARRaow Function
+
+normal way of writing function
+
+        console.log(sum());
+
+        function sum()
+        {
+            let a = 5; b= 6;
+            let sum = a+b;
+            return ` the sum of the two number is ${sum}`;
+        }
+
+fat Arraow function
+
+
+        const sum = () => ` the sum of the two number is ${(a=6)+(b=5)}`;
+        console.log(sum());
+
+4.The For/Of Loop
+The JavaScript for/of statement loops through the values of an iterable objects.
+for/of lets you loop over data structures that are iterable such as Arrays, Strings, Maps, NodeLists, and more.
+The for/of loop has the following syntax:
+
+            for (variable of iterable) {
+            // code block to be executed
+            }
+variable - For every iteration the value of the next property is assigned to the variable. Variable can be declared with const, let, or var.
+
+iterable - An object that has iterable properties.
+
+Looping over an Array
+Example
+            var cars = ["BMW", "Volvo", "Mini"];
+            var x;
+
+            for (x of cars) {
+            document.write(x + "<br >");
+            }
+Looping over a String
+Example
+            var txt = "JavaScript";
+            var x;
+
+            for (x of txt) {
+            document.write(x + "<br >");
+            }
+
+
+5. JavaScript Classes
+JavaScript Classes are templates for JavaScript Objects.
+Use the keyword class to create a class.
+Always add a method named constructor():
+
+Syntax
+    class ClassName {
+    constructor() { ... }
+    }
+Example
+        class Car {
+        constructor(name, year) {
+            this.name = name;
+            this.year = year;
+        }
+        }
+The example above creates a class named "Car".
+The class has two initial properties: "name" and "year".
+A JavaScript class is not an object.
+It is a template for JavaScript objects.
+
+*Using a Class
+When you have a class, you can use the class to create objects:
+                class Car {
+                constructor(name, year) {
+                    this.name = name;
+                    this.year = year;
+                }
+                }
+
+                myCar = new Car("Ford", 2014);
+                document.getElementById("demo").innerHTML =
+                myCar.name + " " + myCar.year;
+
+6. New Global Methods
+ES6 added 2 new global number methods:
+
+isFinite()
+isNaN()
+*The isFinite() Method
+The global isFinite() method returns false if the argument is Infinity or NaN.
+
+Otherwise it returns true:
+
+     isFinite(10/0);       // returns false
+    isFinite(10/1);       // returns true
+
+*The isNaN() Method
+The global isNaN() method returns true if the argument is NaN. Otherwise it returns false:
+
+Example
+isNaN("Hello");       // returns true

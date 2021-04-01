@@ -1,0 +1,76 @@
+Built in data structures in Javascript
+
+
+In this post, we will take a look at different data structures that are available to us out of the box in JavaScript (out of the box since you don't have to code these data structures yourself). We will also take a look at a few methods that will help us process these data structures.
+
+JavaScript has built in support for the following data structures:
+
+1.Array
+2.Set
+3.Map
+
+
+
+#Array
+An array is a collection of items. In JavaScript, you can have an array that contains different types of data. In practice, you will encounter arrays with same data type though.
+
+There are three ways to create an array.
+
+Define a variable and assign it
+new Array([1....n])
+new Array(array length)
+Array operations
+Accessing elements from the array:
+Array elements have an index, index starts from 0 and goes to array.length -1. To access an element at any particular index use the following syntax arrName[index].
+
+To add elements to an already existing array use array.push().
+
+To find the number of elements in the array use array.length property.
+
+To check if an element exists use array.indexOf() or array.includes().
+
+To remove an element from an array, we can use array.splice() method. If you want to remove the last element you can use array.pop() method.
+Splice modifies the existing array, to remove an element at particular index use array.splice(index, 1).
+
+You can combine two arrays using array.concat() method.
+
+
+#Set
+Like Array, Set is also a collection of items, the difference being in a set a value will appear only once.
+
+You can create a set as follows:
+let set = new Set([1, 2, 3, 4, 5, 6, 6, 6])
+set will contain 1,2,3,4,5,6
+
+Set operations
+To get the number of elements in the set use the size property of the Set (set.size).
+To add value use set.add(), returns the set.
+To remove an element use set.delete(value), to remove all the elements from the set use set.clear()
+Set is useful when you need a unique collection of items if you used an array for the same task you will need to have extra logic that eliminates the duplicates.
+
+
+
+#Map
+Is a collection of key-value pairs, so is it the same as an object?
+At the top level, they appear to be the same however, there are few differences.
+
+Keys of an object can only be Strings, that's not the case for maps.
+
+Keys are stored in insertion order in a Map.
+
+You can also get the size of the Map with size property.
+
+A Map is iterable, so you can directly use .forEach on Map. For objects, you will have to get the keys first to get that key's value.
+
+Along with these, Map prototype has a few helper methods.
+For example, to check if a key is present in the map you could do
+map.has(key).
+
+You can create a Map as follows:
+let map = new Map([['name', 'John'], ['age', '21']])
+Map operations
+To get number of elements in the Map use the size property.
+You can't access values from the map as you would do with an Object. You need to use .get() method on the map.
+To add value to the map you need to use the .set() method.
+
+Now that you know the basics of these data structures go ahead and try them out, implement something.
